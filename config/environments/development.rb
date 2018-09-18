@@ -1,5 +1,5 @@
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
+  # Settings here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -34,4 +34,6 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { host: 'http://localhost:3000/' }
 end
